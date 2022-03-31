@@ -24,7 +24,7 @@ echo ""
 echo "Launching tests"
 echo "==============="
 
-blender -b --python utils/testing.py --python-exit-code 1 -- $@
+blender -b --addons sverchok --python utils/testing.py --python-exit-code 1 -- $@
 
 time=$(date)
 echo ::set-output name=time::$time
