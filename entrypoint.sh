@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+echo "$PWD"
 echo "Hello $1"
 ln -s ./tests/references/userpref.blend ${BLENDER_CONFIG_PATH}
 blender -b --python /bpy_activate_addon.py --python-exit-code 1 -- $@
