@@ -8,7 +8,4 @@ RUN ${BLENDERPIP} install --upgrade pip scipy geomdl scikit-image
 COPY bpy_activate_addon.py /bpy_activate_addon.py
 COPY entrypoint.sh /entrypoint.sh
 
-RUN mkdir -p ${BLENDER_CONFIG_PATH}
-COPY userpref.blend ${BLENDER_CONFIG_PATH}/userpref.blend
-
 ENTRYPOINT ["/entrypoint.sh"]
