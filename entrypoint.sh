@@ -11,18 +11,20 @@ echo "================"
 
 blender -b --python /bpy_activate_addon.py --python-exit-code 1 -- $@
 
-echo ""
-echo "Installing userprefs"
-echo "===================="
+# echo ""
+# echo "Installing userprefs"
+# echo "===================="
 
-mkdir -p "${BLENDER_CONFIG_PATH}"
-ln -s ./tests/references/userpref.blend ${BLENDER_CONFIG_PATH}
+# mkdir -p "${BLENDER_CONFIG_PATH}"
+# ln -s ./tests/references/userpref.blend ${BLENDER_CONFIG_PATH}
+
+# we enabled it in python... this probably isn't needed
 
 echo ""
 echo "Launching tests"
 echo "==============="
 
-blender -b --addons sverchok --python utils/testing.py --python-exit-code 1 -- $@
+blender -b --python utils/testing.py --python-exit-code 1 -- $@
 
 time=$(date)
 echo ::set-output name=time::$time
