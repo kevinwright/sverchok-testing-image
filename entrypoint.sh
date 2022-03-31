@@ -29,5 +29,5 @@ echo "==============="
 
 blender -b --python "$BLENDER_ADDON_PATH/sverchok/utils/testing.py" --python-exit-code 1 -- $@
 
-time=$(date)
-echo ::set-output name=time::$time
+ls "${BLENDER_ADDON_PATH}/tests/*.log"
+ls "${BLENDER_ADDON_PATH}/tests/log_files"
