@@ -6,7 +6,7 @@ RUN ${BLENDERPIP} install --upgrade pip setuptools wheel
 RUN ${BLENDERPIP} install --upgrade pip scipy geomdl scikit-image
 
 COPY bpy_activate_addon.py /bpy_activate_addon.py
-RUN mkdir -p ${BLENDER_CONGIG_PATH}
+RUN mkdir -p ${BLENDER_CONFIG_PATH}
 COPY entrypoint.sh ${BLENDER_CONFIG_PATH}/entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
