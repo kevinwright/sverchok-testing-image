@@ -43,7 +43,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          build_args: BLENDER_VERSION=2.93
+          build-args: BLENDER_VERSION=2.93
           tags: ghcr.io/${{ github.repository }}:2.93
       -
         name: Build and push for 3.0
@@ -52,7 +52,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          build_args: BLENDER_VERSION=3.0
+          build-args: BLENDER_VERSION=3.0
           tags: ghcr.io/${{ github.repository }}:3.0
       -
         name: Build and push for 3.1
@@ -61,7 +61,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          build_args: BLENDER_VERSION=3.1
+          build-args: BLENDER_VERSION=3.1
           tags: ghcr.io/${{ github.repository }}:3.1
       -
         name: Image digest
