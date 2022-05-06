@@ -38,7 +38,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       -
         name: Build and push for 2.93
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: .
           file: ./Dockerfile
@@ -47,7 +47,7 @@ jobs:
           tags: ghcr.io/${{ github.repository }}:2.93
       -
         name: Build and push for 3.0
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: .
           file: ./Dockerfile
@@ -56,7 +56,7 @@ jobs:
           tags: ghcr.io/${{ github.repository }}:3.0
       -
         name: Build and push for 3.1
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: .
           file: ./Dockerfile
